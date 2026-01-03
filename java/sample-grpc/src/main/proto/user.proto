@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.github.hondams.sample.grpc;
+
+service UserService {
+  // 単一の要求に対して単一の応答を返す（Unary RPC）
+  rpc GetUser (UserRequest) returns (UserResponse);
+  
+  // ユーザー作成のRPC
+  rpc CreateUser (CreateUserRequest) returns (UserResponse);
+}
+
+message UserRequest {
+  string user_id = 1; // フィールド番号（1, 2, ...）を割り当てる
+}
+
+message CreateUserRequest {
+  string name = 1;
+  int32 age = 2;
+  repeated string email_addresses = 3; // リスト（配列）は repeated を使う
+}
+
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+  repeated string email_addresses = 4;
+  UserStatus status = 5; // Enumの使用
+}
+
+enum UserStatus {
+  USER_STATUS_UNKNOWN = 0; // 0番はデフォルト値として必須
+  USER_STATUS_ACTIVE = 1;
+  USER_STATUS_INACTIVE = 2;
+}

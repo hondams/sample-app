@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.hondams</groupId>
+	<artifactId>sample-module</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>app-parent</module>
+		<module>app-common</module>
+		<module>app-web-parent</module>
+		<module>app-grpc-parent</module>
+		<module>app-job-parent</module>
+		<module>sample-web-app</module>
+		<module>sample-web-api</module>
+		<module>sample-grpc</module>
+		<module>sample-job</module>
+	</modules>
+	<properties>
+		<spotless.version>3.1.0</spotless.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${spotless.version}</version>
+				<configuration>
+					<pom>
+						<sortPom />
+					</pom>
+  				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
