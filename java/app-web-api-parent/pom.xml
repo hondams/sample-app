@@ -7,9 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../app-parent/pom.xml</relativePath>
   </parent>
-  <artifactId>app-web-parent</artifactId>
+  <artifactId>app-web-api-parent</artifactId>
   <packaging>pom</packaging>
-  <name>app-web-parent</name>
+  <name>app-web-api-parent</name>
   <description>Demo project for Spring Boot</description>
   <dependencies>
     <dependency>
@@ -19,6 +19,14 @@
     <dependency>
       <groupId>org.mybatis.spring.boot</groupId>
       <artifactId>mybatis-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.openapitools</groupId>
+      <artifactId>jackson-databind-nullable</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>

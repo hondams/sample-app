@@ -3,12 +3,39 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.github.hondams</groupId>
-    <artifactId>app-web-parent</artifactId>
+    <artifactId>app-web-api-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../app-web-parent/pom.xml</relativePath>
+    <relativePath>../app-web-api-parent/pom.xml</relativePath>
   </parent>
   <artifactId>sample-web-api</artifactId>
   <name>sample-web-api</name>
   <description>Demo project for Spring Boot</description>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openapitools</groupId>
+        <artifactId>openapi-generator-maven-plugin</artifactId>
+        <executions>
+          <!-- inputSpecごとに、executionを定義 -->
+          <execution>
+            <id>generate-api</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <phase>generate-sources</phase>
+            <configuration>
+              <inputSpec>${project.basedir}/src/main/resources/static/openapi-user.yaml</inputSpec>
+              <!-- 親で定義済みの generatorName などはそのまま使えるが
+                                               必要ならここで上書き可能 -->
+              <apiPackage>com.github.hondams.sample.web.api.controller</apiPackage>
+              <modelPackage>com.github.hondams.sample.web.api.model</modelPackage>
+              <invokerPackage>com.github.hondams.sample.web.api.invoker</invokerPackage>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
