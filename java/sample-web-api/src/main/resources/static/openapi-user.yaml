@@ -58,7 +58,7 @@ paths:
           required: true
           description: 取得したいユーザーのID
           schema:
-            type: integer
+            type: string
       responses:
         '200':
           description: 成功
@@ -74,17 +74,51 @@ components:
     User:
       type: object
       required:
-        - id
-        - name
+        - userId
+        - userName
       properties:
-        id:
-          type: integer
-          format: int64
-          example: 1
-        name:
+        userId:
           type: string
-          example: 山田 太郎
+          description: ユーザー識別子
+          example: "u-0001"
+        userName:
+          type: string
+          description: ユーザーの表示名
+          example: "山田 太郎"
+        gender:
+          type: string
+          description: 性別（列挙）
+          enum:
+            - MALE
+            - FEMALE
+            - OTHER
+          example: MALE
+          # 注: `Gender` 列挙体の実際の値がリポジトリに見当たらなかったため、合理的な仮定値を使用しています。
         email:
           type: string
           format: email
           example: tarou.yamada@example.com
+        phoneNumber:
+          type: string
+          example: "090-1234-5678"
+        postalCd:
+          type: string
+          description: "郵便番号（例: 123-4567）"
+          example: "123-4567"
+        prefecture:
+          type: string
+          description: 都道府県
+          example: 東京都
+        address:
+          type: string
+          description: 市区町村＋大字・丁目＋番地
+          example: 世田谷区北沢2-11-3
+        room:
+          type: string
+          description: 建物名・部屋番号
+          example: サンプルマンション 101
+        birthDate:
+          type: string
+          format: date
+          description: 生年月日
+          example: "1980-01-01"

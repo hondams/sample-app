@@ -9,6 +9,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>app-parent</module>
+        <module>app-fw</module>
+        <module>app-test</module>
         <module>app-common</module>
         <module>app-web-api-parent</module>
         <module>app-web-app-parent</module>

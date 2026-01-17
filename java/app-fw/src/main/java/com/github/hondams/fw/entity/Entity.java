@@ -1,4 +1,4 @@
-package com.github.hondams.common.repository;
+package com.github.hondams.fw.entity;
 
 public interface Entity<ID> {
 

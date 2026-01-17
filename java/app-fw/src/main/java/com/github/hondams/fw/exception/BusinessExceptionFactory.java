@@ -1,4 +1,4 @@
-package com.github.hondams.common.exception;
+package com.github.hondams.fw.exception;
 
 import java.util.Locale;
 import lombok.RequiredArgsConstructor;

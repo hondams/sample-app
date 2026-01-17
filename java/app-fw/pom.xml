@@ -7,15 +7,20 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../app-parent/pom.xml</relativePath>
   </parent>
-  <artifactId>app-common</artifactId>
-  <name>app-common</name>
+  <artifactId>app-fw</artifactId>
+  <name>app-fw</name>
   <description>Demo project for Spring Boot</description>
 
   <dependencies>
     <dependency>
-      <groupId>com.github.hondams</groupId>
-      <artifactId>app-fw</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

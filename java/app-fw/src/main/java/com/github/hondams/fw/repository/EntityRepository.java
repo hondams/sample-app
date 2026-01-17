@@ -1,6 +1,7 @@
-package com.github.hondams.common.repository;
+package com.github.hondams.fw.repository;
 
 
+import com.github.hondams.fw.entity.Entity;
 import java.util.List;
 import org.springframework.dao.OptimisticLockingFailureException;
 

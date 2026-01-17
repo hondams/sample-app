@@ -1,4 +1,4 @@
-package com.github.hondams.common.exception;
+package com.github.hondams.fw.exception;
 
 import java.io.Serial;
 import lombok.Getter;
