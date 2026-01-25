@@ -22,6 +22,22 @@
       <artifactId>mybatis-spring-boot-starter</artifactId>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Use Spring Boot test starter to bring a consistent JUnit Platform and test libs -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

@@ -1,4 +1,4 @@
-package com.github.hondams.fw.value;
+package com.github.hondams.fw.value.code;
 
 import java.util.HashMap;
 import java.util.Map;

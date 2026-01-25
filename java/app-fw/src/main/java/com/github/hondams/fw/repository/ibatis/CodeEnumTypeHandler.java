@@ -1,7 +1,7 @@
 package com.github.hondams.fw.repository.ibatis;
 
-import com.github.hondams.fw.value.CodeEnum;
-import com.github.hondams.fw.value.CodeEnumFactory;
+import com.github.hondams.fw.value.code.CodeEnum;
+import com.github.hondams.fw.value.code.CodeEnumFactory;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
