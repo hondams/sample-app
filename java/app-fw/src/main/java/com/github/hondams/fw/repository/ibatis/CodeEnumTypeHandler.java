@@ -1,7 +1,7 @@
 package com.github.hondams.fw.repository.ibatis;
 
 import com.github.hondams.fw.value.code.CodeEnum;
-import com.github.hondams.fw.value.code.CodeEnumFactory;
+import com.github.hondams.fw.value.code.CodeEnumUtils;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,18 +29,18 @@ public class CodeEnumTypeHandler<E extends Enum<E> & CodeEnum> extends BaseTypeH
     @Override
     public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
         String code = rs.getString(columnName);
-        return CodeEnumFactory.fromCode(this.type, code);
+        return CodeEnumUtils.fromCode(this.type, code);
     }
 
     @Override
     public E getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
         String code = rs.getString(columnIndex);
-        return CodeEnumFactory.fromCode(this.type, code);
+        return CodeEnumUtils.fromCode(this.type, code);
     }
 
     @Override
     public E getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
         String code = cs.getString(columnIndex);
-        return CodeEnumFactory.fromCode(this.type, code);
+        return CodeEnumUtils.fromCode(this.type, code);
     }
 }

@@ -22,6 +22,10 @@
       <artifactId>mybatis-spring-boot-starter</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
 
     <!-- Use Spring Boot test starter to bring a consistent JUnit Platform and test libs -->
     <dependency>

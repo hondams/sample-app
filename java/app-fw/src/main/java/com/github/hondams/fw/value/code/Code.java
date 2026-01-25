@@ -1,12 +1,13 @@
 package com.github.hondams.fw.value.code;
 
 import java.util.Locale;
+import org.jspecify.annotations.NonNull;
 
 public interface Code {
 
-    String getCode();
+    @NonNull String getCode();
 
-    String getDefaultLabel();
+    @NonNull String getDefaultLabel();
 
-    String getLabel(Locale locale);
+    @NonNull String getLabel(Locale locale);
 }

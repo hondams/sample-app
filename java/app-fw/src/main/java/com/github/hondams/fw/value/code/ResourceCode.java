@@ -21,12 +21,12 @@ public final class ResourceCode implements Code {
     }
 
     @Override
-    public String getDefaultLabel() {
+    public @NonNull String getDefaultLabel() {
         return this.resourceAccessor.getDefaultLabel(this.codeSetName, this.code);
     }
 
     @Override
-    public String getLabel(Locale locale) {
+    public @NonNull String getLabel(Locale locale) {
         if (locale == null) {
             return getDefaultLabel();
         }
